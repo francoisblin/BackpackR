@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-mongoose.connect("mongodb+srv://PaupietteM:irkVfUdWtltBTACR@cluster0.g7uut.mongodb.net/chap24vue?retryWrites=true&w=majority",
+mongoose.connect(
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
