@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col content-center justify-center mx-auto">
-    <h1 class="text-xl mx-auto">Just answer few questions about your next trail</h1>
-        <form @submit.prevent="sendForm" class="shadow-lg bg-white max-w-xl justify-center content-center mt-4 mx-auto rounded-lg">
+    <h1 class="font-bold text-2xl mx-auto mt-4">Just answer few questions about your next trail</h1>
+        <form @submit.prevent="sendForm" class="shadow-lg bg-white max-w-xl flex flex-col mb-7 mt-12 mx-auto rounded-lg">
           <img class="w-full h-40 object-cover rounded-t-lg" src="../assets/joshua-earle--87JyMb9ZfU-unsplash.jpg" />
           <div class="p-4">
 
@@ -34,13 +34,12 @@
             </fieldset>
 
             <fieldset>
-              <legend>Climate</legend>
+              <legend class="font-bold text-gray-800 mt-4">Which kind of Climate will you walking through ?</legend>
 
-              <p>Which kind of Climate will you walking through ?</p>
               <div>
                 <BaseRadioGroup
                   v-model="sac.climate"
-                  name="cimate"
+                  name="climate"
                   :options="climateOptions"
                   vertical
                 />
@@ -49,9 +48,8 @@
             </fieldset>
 
             <fieldset>
-              <legend>Season</legend>
+              <legend class="font-bold text-gray-800 mt-4">Which kind of season will you walking through ?</legend>
 
-              <p>Which kind of Climate will you walking through ?</p>
               <div>
                 <BaseRadioGroup
                   v-model="sac.season"
@@ -63,9 +61,8 @@
             </fieldset>
 
             <fieldset>
-              <legend>Persons</legend>
+              <legend class="font-bold text-gray-800 mt-4">How many persons will be in this famous trail ?</legend>
 
-              <p>How many persons will be in this famous trail ?</p>
               <div>
                 <BaseRadioGroup
                   v-model="sac.people"
@@ -76,8 +73,8 @@
               </div>
             </fieldset>
 
-            <fieldset>
-              <legend>What's your weight ?</legend>
+            <fieldset class="flex flex-col">
+              <legend class="font-bold text-gray-800 mt-4">What's your weight ?</legend>
                 <base-input
                   v-model="sac.weight"
                   label="Weight"
@@ -86,9 +83,8 @@
             </fieldset>
 
             <fieldset>
-              <legend>Profile</legend>
+              <legend class="font-bold text-gray-800 mt-4">What's your profile of backpacking ?</legend>
 
-              <p>What's your profile of backpacking ?</p>
               <div>
                 <BaseRadioGroup
                   v-model="sac.profile"
@@ -99,13 +95,11 @@
               </div>
             </fieldset>
 
-            <button type="submit">
-              Sign In
+            <button type="submit" class="mt-4 bg-green-200 px-4 py-2 rounded-xl shadow hover:bg-green-400 block m-auto">
+              That's Ok !
             </button>
           </div>
         </form>
-
-        <pre>{{ sac }}</pre>
 
   </div>
 </template>
@@ -127,9 +121,9 @@ export default {
       },
       climateOptions: [
         { label: 'Oceanique', value: 'oceanique' },
-        { label: 'mediterranean', value: 'mediterranean' },
-        { label: 'mountain', value: 'mountain' },
-        { label: 'continental', value: 'continental' }
+        { label: 'Mediterranean', value: 'mediterranean' },
+        { label: 'Mountain', value: 'mountain' },
+        { label: 'Continental', value: 'continental' }
       ],
       seasonOptions: [
         { label: 'Summer', value: 'summer' },

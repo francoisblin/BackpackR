@@ -6,6 +6,7 @@
     :class="{
       'horizontal': !vertical
       }"
+    class="p-2"
   >
     <BaseRadio
       :id="id"
@@ -14,6 +15,7 @@
       :modelValue="modelValue"
       :name="name"
       @update:modelValue="$emit('update:modelValue', $event)"
+      class="mr-2"
     />
   </component>
 </template>

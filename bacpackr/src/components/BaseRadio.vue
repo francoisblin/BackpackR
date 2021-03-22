@@ -6,8 +6,15 @@
       v-bind="$attrs"
       @change="$emit('update:modelValue', value)"
       :id="id"
+      class="pt-1"
     />
-  <label :for="id" v-if="label">{{ label }}</label>
+  <label
+      :for="id"
+      v-if="label"
+      class="pb-3"
+    >
+      {{ label }}
+  </label>
 </template>
 
 <script>
