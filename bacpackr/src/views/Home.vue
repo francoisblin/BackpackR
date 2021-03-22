@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home bg-gray-100 flex flex-col content-center justify-center">
     <h1>The incredible Pack-O-Matic</h1>
     <SacOMatic />
   </div>
