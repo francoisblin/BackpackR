@@ -11,7 +11,6 @@
                   v-model="sac.name"
                   label="Name"
                   type="text"
-                  error="This input has an error!"
                 />
             </fieldset>
 

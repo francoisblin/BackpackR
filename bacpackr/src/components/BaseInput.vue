@@ -3,7 +3,7 @@
     <input
       v-bind="$attrs"
       :placeholder="label"
-      class="rounded-lg shadow pr-2"
+      class="rounded-lg shadow px-2"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
       :id="id"
@@ -35,3 +35,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+
+
+</style>
