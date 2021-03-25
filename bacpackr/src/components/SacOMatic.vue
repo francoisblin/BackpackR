@@ -104,7 +104,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   name: 'SacOMatic',
   data () {
@@ -142,16 +142,16 @@ export default {
         { label: 'Heavy', value: 'heavy' }
       ]
     }
-  },
-  methods: {
-    sendForm (e) {
-      axios.post(
-        'https://my-json-server.typicode.com/francoisblin/BackpackR/sac', this.sac
-      )
-        .then(res => console.log('Response', res))
-        .catch(err => console.log('Error', err))
-    }
   }
+  // methods: {
+  //   sendForm (e) {
+  //     axios.post(
+  //       'https://my-json-server.typicode.com/francoisblin/BackpackR/sac', this.sac
+  //     )
+  //       .then(res => console.log('Response', res))
+  //       .catch(err => console.log('Error', err))
+  //   }
+  // }
 }
 </script>
 
